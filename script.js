@@ -4,14 +4,14 @@ let splitedArr=str.split("");
 console.log(splitedArr);
 var newEle="";
 var i=0;
-while(i<splitedArr.length ) {
-	if(splitedArr[i]==splitedArr[i+1]){
-		i=i+2;
-	}
-	if(splitedArr[i]!=splitedArr[i+1]){
-		newEle=splitedArr[i];
-	}
-	i++;
-	
+for (let i = 0; i < splitedArr.length; i++) {
+	for (let j = 0; j < splitedArr.length; j++){
+		if(splitedArr[i]==splitedArr[j]&&i!=j){
+			console.log(splitedArr[j]);
+			break;
+		}else{
+			newEle=splitedArr[j]
+		}
+		}
 	}
 alert(newEle);
